@@ -6,10 +6,14 @@ public class player : MonoBehaviour
 {
     public GameObject MagicSword;
     public GameObject SwordPosition;
+    public GameObject player_body;
+    public GameObject player_head;
+    private float interval;
+    private float time = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        interval = 0.4f;
     }
 
     // Update is called once per frame
@@ -47,9 +51,35 @@ public class player : MonoBehaviour
             }
        
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKey(KeyCode.J))
         {
-            Instantiate(MagicSword, SwordPosition.transform.position,MagicSword.transform.rotation);
+            time += Time.deltaTime;
+            if (time > interval)
+            {
+                Instantiate(MagicSword, SwordPosition.transform.position, MagicSword.transform.rotation);
+                time = 0f;
+            }
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            StartCoroutine("PlayerDamage");
+        }
+    }
+    IEnumerator PlayerDamage()
+    {
+        for (int i = 0; i <3; i++)
+        {
+            player_body.SetActive(false);
+            player_head.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
+            player_body.SetActive(true);
+            player_head.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
+        }
+        
+        
     }
 }
