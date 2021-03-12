@@ -22,6 +22,7 @@ public class CreateEnemy1 : MonoBehaviour
             GameObject Enemy1s;
             Enemy1s = GameObject.Instantiate(Enemy1);
             Enemy1s.transform.position = transform.position;
+            Enemy1s.transform.localEulerAngles = new Vector3(0, 90, 0);
             time = 0f;
         }
         

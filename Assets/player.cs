@@ -1,24 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
+    public Text ScoreText;
     public GameObject MagicSword;
     public GameObject SwordPosition;
     public GameObject player_body;
     public GameObject player_head;
     private float interval;
     private float time = 0f;
+    public int HP;
+    public Slider slider;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
         interval = 0.4f;
+        HP = 100;
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        ScoreText.text = "SCORE:" + score;
+        slider.value = HP;
         if (Input.GetKey(KeyCode.W))
         {
             if(transform.position.y<3.9f)
@@ -65,6 +74,7 @@ public class player : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            HP -= 5;
             StartCoroutine("PlayerDamage");
         }
     }
