@@ -13,13 +13,16 @@ public class player : MonoBehaviour
     private float interval;
     private float time = 0f;
     public int HP;
+    public int MP;
     public Slider slider;
+    public Slider slider2;
     public int score;
     // Start is called before the first frame update
     void Start()
     {
         interval = 0.4f;
         HP = 100;
+        MP = 0;
         score = 0;
     }
 
@@ -28,6 +31,7 @@ public class player : MonoBehaviour
     {
         ScoreText.text = "SCORE:" + score;
         slider.value = HP;
+        slider2.value = MP;
         if (Input.GetKey(KeyCode.W))
         {
             if(transform.position.y<3.9f)

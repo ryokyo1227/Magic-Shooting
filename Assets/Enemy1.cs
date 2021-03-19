@@ -24,6 +24,8 @@ public class Enemy1 : MonoBehaviour
         if (other.gameObject.tag == "MagicSword")
         {
             p.score += 5;
+            p.MP += 1;
+            Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
     }
