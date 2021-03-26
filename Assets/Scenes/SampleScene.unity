@@ -270,6 +270,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19407601}
   m_CullTransparentMesh: 0
+--- !u!1001 &44246587
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3285256916687789850}
+    m_Modifications:
+    - target: {fileID: 100002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_Name
+      value: shield2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.3420201
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396927
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db1893f072eff634eb3b894a02ceb419, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73c9ec2372643644d842ac0cdd54cd31, type: 3}
+--- !u!4 &44246588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: 73c9ec2372643644d842ac0cdd54cd31,
+    type: 3}
+  m_PrefabInstance: {fileID: 44246587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,6 +2510,7 @@ Transform:
   - {fileID: 804892901}
   - {fileID: 300262198}
   - {fileID: 1048292137}
+  - {fileID: 44246588}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
@@ -2466,7 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 486958923}
-  MagicSword: {fileID: 3832862954321689625, guid: 68a3f41633a0b9f4a82469b8eb763bd7,
+  MagicSword: {fileID: 595551837878771256, guid: 68a3f41633a0b9f4a82469b8eb763bd7,
     type: 3}
   SwordPosition: {fileID: 1048292136}
   player_body: {fileID: 803651954}
